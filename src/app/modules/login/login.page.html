@@ -1,0 +1,35 @@
+<ion-content>
+  <div class="d-flex ion-justify-content-center align-items-center login-page">
+    <ion-card class="d-flex ion-justify-content-center flex-column">
+      <ion-card-header
+        class="d-flex ion-justify-content-center align-items-center"
+        >Login</ion-card-header
+      >
+      <ion-card-content>
+        <ion-grid class="justify-content-center">
+          <ion-row size="12">
+            <ion-col
+              size="12"
+              class="d-flex ion-justify-content-center flex-column align-items-center"
+            >
+              <ion-label>User/Email</ion-label>
+              <ion-input type="text" [(ngModel)]="userName"></ion-input>
+            </ion-col>
+            <ion-col
+              size="12"
+              class="d-flex ion-justify-content-center flex-column align-items-center"
+            >
+              <ion-label>Password</ion-label>
+              <ion-input type="password" [(ngModel)]="password"></ion-input>
+            </ion-col>
+            <ion-col
+              class="d-flex ion-justify-content-center align-items-center"
+            >
+              <ion-button (click)="doLogin()">Login</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

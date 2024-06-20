@@ -1,0 +1,25 @@
+.registration-page {
+  ion-input {
+    border: 1px solid #d7d7d7;
+    border-radius: 10px;
+    --padding-start: 10px;
+    --padding-left: 10px;
+    text-align: start;
+    background: none;
+    font-weight: 600;
+    font-size: 14px;
+    --highlight-color: none;
+  }
+
+  ion-select {
+    border: 1px solid #d7d7d7;
+    border-radius: 10px;
+    --padding-start: 10px;
+    --padding-left: 10px;
+    text-align: start;
+    background: none;
+    font-weight: 600;
+    font-size: 14px;
+    --highlight-color: none;
+  }
+}

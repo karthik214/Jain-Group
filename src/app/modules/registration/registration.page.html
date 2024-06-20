@@ -1,0 +1,76 @@
+<ion-content>
+  <app-header></app-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <h2>Register</h2>
+      </ion-col>
+      <ion-col class="registration-page">
+        <form [formGroup]="registerForm">
+          <ion-row size="12">
+            <ion-col size="6">
+              <ion-label>Name</ion-label>
+              <ion-input type="text" formControlName="name"></ion-input>
+            </ion-col>
+            <ion-col size="6">
+              <ion-label>Mobile Number</ion-label>
+              <ion-input
+                type="number"
+                formControlName="mobileNumber"
+              ></ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row size="12">
+            <ion-col size="6">
+              <ion-label>Email Address</ion-label>
+              <ion-input type="text" formControlName="emailAddress"></ion-input>
+            </ion-col>
+            <ion-col size="6">
+              <ion-label>Gender</ion-label>
+              <ion-select formControlName="gender" placeholder="Select Gender">
+                <ion-select-option value="1">Male</ion-select-option>
+                <ion-select-option value="2">Female</ion-select-option>
+                <ion-select-option value="3">Others</ion-select-option>
+              </ion-select>
+            </ion-col>
+          </ion-row>
+          <ion-row size="12">
+            <ion-col size="6">
+              <ion-label>Application Amount(INR)</ion-label>
+              <ion-input
+                type="number"
+                formControlName="applicationAmount"
+              ></ion-input>
+            </ion-col>
+            <ion-col size="6">
+              <ion-label>Profile Picture</ion-label>
+              <ion-input
+                type="file"
+                formControlName="uploadedImage"
+                (change)="onFileSelected($event)"
+              ></ion-input>
+            </ion-col>
+          </ion-row>
+          <ion-row size="12">
+            <ion-col size="6">
+              <ion-label>Marks Card</ion-label>
+              <ion-input
+                formControlName="uploadedMarksCard"
+                type="file"
+                (change)="onFileSelected($event)"
+              ></ion-input>
+            </ion-col>
+          </ion-row>
+
+          <ion-row size="12">
+            <ion-col size="4">
+              <ion-button color="primary" (click)="submitRegistrationForm()"
+                >Submit</ion-button
+              >
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

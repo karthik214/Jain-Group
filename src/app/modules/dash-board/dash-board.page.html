@@ -1,0 +1,57 @@
+<ion-content>
+  <app-header></app-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="text-align-center">
+        <h2>Appliction List</h2>
+      </ion-col>
+      <ion-col size="12">
+        <table class="table-fill">
+          <thead>
+            <tr>
+              <th class="text-left">Sl No</th>
+              <th class="text-left">Name</th>
+              <th class="text-left">Mobile Numer</th>
+              <th class="text-left">Email Address</th>
+              <th class="text-left">Gender</th>
+              <th class="text-left">Application Amount</th>
+              <th class="text-left">Edit</th>
+              <th class="text-left">Delete</th>
+            </tr>
+          </thead>
+          <tbody class="table-hover">
+            <tr *ngFor="let userApplication of userApplications;let i=index">
+              <td class="text-center">{{i+1}}</td>
+              <td class="text-center">{{userApplication.name}}</td>
+              <td class="text-center">{{userApplication.mobileNumber}}</td>
+              <td class="text-center">{{userApplication.emailAddress}}</td>
+              <td class="text-center">{{userApplication.gender}}</td>
+              <td class="text-center">{{userApplication.applicationAmount}}</td>
+              <td class="text-center">
+                <ion-button
+                  color="primary"
+                  (click)="editApplicationData(userApplication.id)"
+                  >Edit</ion-button
+                >
+              </td>
+              <td class="text-center">
+                <ion-button
+                  color="danger"
+                  (click)="deleteSelectedApplication(userApplication.id)"
+                  >Delete</ion-button
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="d-flex justify-content-center">
+        <ion-button (click)="gotRegistrationPage()" color="primary"
+          >Register</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

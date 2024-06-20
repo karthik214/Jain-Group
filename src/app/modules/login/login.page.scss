@@ -1,0 +1,24 @@
+.login-page {
+  width: 100%;
+  height: 100%;
+
+  ion-card-header {
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  ion-label {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  ion-input {
+    border: 1px solid #d7d7d7;
+    border-radius: 10px;
+    text-align: center;
+    background: none;
+    font-weight: 600;
+    font-size: 14px;
+    --highlight-color: none;
+  }
+}
